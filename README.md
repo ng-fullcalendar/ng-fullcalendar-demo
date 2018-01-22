@@ -4,7 +4,7 @@
 
 This project use ng-fullcalendar [NPM](https://www.npmjs.com/package/ng-fullcalendar)
 ```
-@angular 5.2.1
+@angular 4.4.6
 @angular/cli 1.6.5
 ```
 

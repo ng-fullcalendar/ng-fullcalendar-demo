@@ -35,6 +35,9 @@ export class AppComponent implements OnInit  {
   clickButton(model: any) {
     this.displayEvent = model;
   }
+  dayClick(model: any) {
+    console.log(model);
+  }
   eventClick(model: any) {
     model = {
       event: {

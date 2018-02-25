@@ -10,22 +10,26 @@ import { EventSesrvice } from './event.service';
 })
 export class AppComponent implements OnInit  {
   calendarOptions: Options;
- displayEvent: any;
+  displayEvent: any;
+  events = null;
   @ViewChild(CalendarComponent) ucCalendar: CalendarComponent;
   constructor(protected eventService: EventSesrvice) { }
 
   ngOnInit() {
+    this.calendarOptions = {
+      editable: true,
+      eventLimit: false,
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay,listMonth'
+      },
+      events: []
+    };
+  }
+  loadevents() {
     this.eventService.getEvents().subscribe(data => {
-      this.calendarOptions = {
-        editable: true,
-        eventLimit: false,
-        header: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'month,agendaWeek,agendaDay,listMonth'
-        },
-        events: data
-      };
+      this.events = data;
     });
   }
   clickButton(model: any) {

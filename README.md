@@ -2,7 +2,7 @@
 
 
 
-This project use ng-fullcalendar [NPM](https://www.npmjs.com/package/ng-fullcalendar)
+This project use **old** ng-fullcalendar [NPM](https://www.npmjs.com/package/ng-fullcalendar), please use @fulcalendar/angular
 ```
 @angular 6.0.9
 @angular/cli 6.0.8
